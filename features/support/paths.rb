@@ -15,7 +15,7 @@ module NavigationHelpers
     case page_name
 
     when /^the home\s?page$/
-      '/'
+      '/movies'
 
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
@@ -32,9 +32,8 @@ module NavigationHelpers
       "/movies/#{m.first.id.to_s()}"
 
     when /^the Similar Movies page for "(.*)"$/
-      m = Movie.where("title = \"#{$1}\"")
-      director = URI::encode(m.first.director)
-      "/movies/director/#{director}"
+     film = URI::encode($1)
+     "/movies/similar/#{film}"
     else
       begin
         page_name =~ /^the (.*) page$/

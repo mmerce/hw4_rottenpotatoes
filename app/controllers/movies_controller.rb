@@ -59,8 +59,16 @@ class MoviesController < ApplicationController
   end
 
 
-  def director
-    @movies = Movie.where("director = \"#{params[:director]}\"")
-    @director = params[:director]
+  def similar
+    @movies = Movie.where("title = \"#{params[:title]}\"")
+    if @movies != nil
+      @director = @movies.first.director
+      if @director.length == 0
+        flash[:notice] = "'#{params[:title]}' has no director info"
+        redirect_to movies_path
+      else
+        @movies = Movie.where("director = \"#{@director}\"")
+      end
+    end
   end
 end
