@@ -60,15 +60,12 @@ class MoviesController < ApplicationController
 
 
   def similar
-    @movies = Movie.where("title = \"#{params[:title]}\"")
-    if @movies != nil
-      @director = @movies.first.director
-      if @director.length == 0
-        flash[:notice] = "'#{params[:title]}' has no director info"
-        redirect_to movies_path
-      else
-        @movies = Movie.where("director = \"#{@director}\"")
-      end
+    @movies = Movie.similar_by_director(params[:id].to_i())
+    if @movies.length < 1
+      flash[:notice] = "'#{params[:title]}' has no director info"
+      redirect_to movies_path
+    else
+      render "similar"
     end
   end
 end

@@ -1,0 +1,21 @@
+ridley_scott_1:
+  id: 1
+  title: Alien
+  rating: R
+  release_date: 1979-05-25
+  director: Ridley Scott
+
+ridley_scott_2:
+  id: 2
+  title: Blade Runner
+  rating: PG
+  release_date: 1982-06-25
+  director: Ridley Scott
+
+george_lucas_1:
+  id: 3
+  title: Star Wars
+  rating: PG
+  release_date: 1977-05-25
+  director: George Lucas
+

@@ -32,8 +32,9 @@ module NavigationHelpers
       "/movies/#{m.first.id.to_s()}"
 
     when /^the Similar Movies page for "(.*)"$/
-     film = URI::encode($1)
+         film = URI::encode($1)
      "/movies/similar/#{film}"
+
     else
       begin
         page_name =~ /^the (.*) page$/
