@@ -8,6 +8,6 @@ class Movie < ActiveRecord::Base
       director = movie.director
       return self.where("director = \"#{director}\"")
     end
-    return []
+    return false
   end
 end
