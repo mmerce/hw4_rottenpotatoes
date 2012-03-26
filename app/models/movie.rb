@@ -6,9 +6,8 @@ class Movie < ActiveRecord::Base
     movie = self.find(id)
     if movie.director.length > 0
       director = movie.director
-      similar = self.where("director = \"#{director}\"")
-    else
-      similar = []
+      return self.where("director = \"#{director}\"")
     end
+    return []
   end
 end
