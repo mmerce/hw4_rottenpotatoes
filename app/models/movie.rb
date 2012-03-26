@@ -4,7 +4,11 @@ class Movie < ActiveRecord::Base
   end
   def self.similar_by_director(id)
     movie = self.find(id)
-    director = movie.director
-    similar = self.where("director = \"#{director}\"")
+    if movie.director.length > 0
+      director = movie.director
+      similar = self.where("director = \"#{director}\"")
+    else
+      similar = []
+    end
   end
 end

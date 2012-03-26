@@ -3,7 +3,6 @@
 # This file is used by web_steps.rb, which you should also delete
 #
 # You have been warned
-require 'open-uri'
 module NavigationHelpers
   # Maps a name to a path. Used by the
   #
@@ -23,6 +22,9 @@ module NavigationHelpers
     #   when /^(.*)'s profile page$/i
     #     user_profile_path(User.find_by_login($1))
 
+    when /^the RottenPotatoes\s?home\s?page$/
+          '/movies'
+
     when /^the edit page for "(.*)"$/
       m = Movie.where("title = \"#{$1}\"")
       "/movies/#{m.first.id.to_s()}/edit"
@@ -32,8 +34,9 @@ module NavigationHelpers
       "/movies/#{m.first.id.to_s()}"
 
     when /^the Similar Movies page for "(.*)"$/
-         film = URI::encode($1)
-     "/movies/similar/#{film}"
+      m = Movie.where("title = \"#{$1}\"")
+      "/movies/similar/#{m.first.id.to_s()}"
+
 
     else
       begin

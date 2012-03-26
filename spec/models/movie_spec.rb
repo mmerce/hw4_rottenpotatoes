@@ -1,3 +1,4 @@
+require 'spec_helper'
 describe Movie do
   fixtures :movies
   it 'should fetch all films related by director to the present one' do
