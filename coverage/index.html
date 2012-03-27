@@ -21,20 +21,20 @@
       <img src="./assets/0.4.5/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2012-03-26T23:03:41+00:00">2012-03-26T23:03:41+00:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2012-03-27T22:35:20+00:00">2012-03-27T22:35:20+00:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     All Files
-    (<span class="yellow">86.21%</span>)
+    (<span class="yellow">86.67%</span>)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>5</b> files in total.
-    <b>58</b> relevant lines. 
-    <span class="green"><b>50</b> lines covered</span> and
+    <b>60</b> relevant lines. 
+    <span class="green"><b>52</b> lines covered</span> and
     <span class="red"><b>8</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -61,10 +61,10 @@
       
       <tr>
         <td><a href="#4edf3ade93cc6834e6cb01885fb76830b06ec0db" class="src_link" title="./app/controllers/movies_controller.rb">./app/controllers/movies_controller.rb</a></td>
-        <td class="yellow">83.72 %</td>
-        <td>72</td>
-        <td>43</td>
-        <td>36</td>
+        <td class="yellow">84.44 %</td>
+        <td>74</td>
+        <td>45</td>
+        <td>38</td>
         <td>7</td>
       </tr>
       
@@ -103,13 +103,13 @@
           <div class="file_list_container" id="Controllers">
   <h2>
     Controllers
-    (<span class="yellow">84.44%</span>)
+    (<span class="yellow">85.11%</span>)
   </h2>
   <a name="Controllers"></a>
   <div>
     <b>2</b> files in total.
-    <b>45</b> relevant lines. 
-    <span class="green"><b>38</b> lines covered</span> and
+    <b>47</b> relevant lines. 
+    <span class="green"><b>40</b> lines covered</span> and
     <span class="red"><b>7</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -136,10 +136,10 @@
       
       <tr>
         <td><a href="#4edf3ade93cc6834e6cb01885fb76830b06ec0db" class="src_link" title="./app/controllers/movies_controller.rb">./app/controllers/movies_controller.rb</a></td>
-        <td class="yellow">83.72 %</td>
-        <td>72</td>
-        <td>43</td>
-        <td>36</td>
+        <td class="yellow">84.44 %</td>
+        <td>74</td>
+        <td>45</td>
+        <td>38</td>
         <td>7</td>
       </tr>
       
@@ -366,7 +366,7 @@
     <tr>
       <td colspan="3">
         <h3>./app/controllers/movies_controller.rb</h3>
-        <h4><span class="yellow">83.72 %</span> covered</h4>
+        <h4><span class="yellow">84.44 %</span> covered</h4>
       </td>
     </tr>
     <tr>
@@ -1189,7 +1189,7 @@
         <pre>63</pre>
       </td>
       <td>
-        <pre>    @title = Movie.find(params[:id].to_i()).title</pre>
+        <pre>    id = params[:id]</pre>
       </td>
       <td class="hits">
         5
@@ -1202,7 +1202,7 @@
         <pre>64</pre>
       </td>
       <td>
-        <pre>    @movies = Movie.similar_by_director(params[:id].to_i())</pre>
+        <pre>    id = id.to_i()</pre>
       </td>
       <td class="hits">
         5
@@ -1215,6 +1215,32 @@
         <pre>65</pre>
       </td>
       <td>
+        <pre>    @title = Movie.find(id).title</pre>
+      </td>
+      <td class="hits">
+        5
+      </td>
+    </tr>
+  
+    
+    <tr class="hit" data-hits="5">
+      <td class="line_number">
+        <pre>66</pre>
+      </td>
+      <td>
+        <pre>    @movies = Movie.similar_by_director(id)</pre>
+      </td>
+      <td class="hits">
+        5
+      </td>
+    </tr>
+  
+    
+    <tr class="hit" data-hits="5">
+      <td class="line_number">
+        <pre>67</pre>
+      </td>
+      <td>
         <pre>    if !@movies</pre>
       </td>
       <td class="hits">
@@ -1225,7 +1251,7 @@
     
     <tr class="hit" data-hits="1">
       <td class="line_number">
-        <pre>66</pre>
+        <pre>68</pre>
       </td>
       <td>
         <pre>      flash[:notice] = &quot;'#{@title}' has no director info&quot;</pre>
@@ -1238,7 +1264,7 @@
     
     <tr class="hit" data-hits="1">
       <td class="line_number">
-        <pre>67</pre>
+        <pre>69</pre>
       </td>
       <td>
         <pre>      redirect_to movies_path</pre>
@@ -1251,7 +1277,7 @@
     
     <tr class="never" >
       <td class="line_number">
-        <pre>68</pre>
+        <pre>70</pre>
       </td>
       <td>
         <pre>    else</pre>
@@ -1264,7 +1290,7 @@
     
     <tr class="hit" data-hits="4">
       <td class="line_number">
-        <pre>69</pre>
+        <pre>71</pre>
       </td>
       <td>
         <pre>      render &quot;similar&quot;</pre>
@@ -1277,7 +1303,7 @@
     
     <tr class="never" >
       <td class="line_number">
-        <pre>70</pre>
+        <pre>72</pre>
       </td>
       <td>
         <pre>    end</pre>
@@ -1290,7 +1316,7 @@
     
     <tr class="never" >
       <td class="line_number">
-        <pre>71</pre>
+        <pre>73</pre>
       </td>
       <td>
         <pre>  end</pre>
@@ -1303,7 +1329,7 @@
     
     <tr class="never" >
       <td class="line_number">
-        <pre>72</pre>
+        <pre>74</pre>
       </td>
       <td>
         <pre>end</pre>

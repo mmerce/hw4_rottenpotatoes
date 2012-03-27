@@ -81,6 +81,8 @@ Cucumber Features:
     - 2
     - 2
     - 2
+    - 2
+    - 2
     - 1
     - 1
     - 
@@ -102,7 +104,7 @@ Cucumber Features:
     - 1
     - 
     - 
-  :created_at: 2012-03-26 22:55:00.326382 +00:00
+  :created_at: 2012-03-27 22:33:24.519332 +00:00
 RSpec: 
   :original_result: 
     /home/ubuntu/hw4_rottenpotatoes/app/controllers/application_controller.rb: 
@@ -185,6 +187,8 @@ RSpec:
     - 3
     - 3
     - 3
+    - 3
+    - 3
     - 0
     - 0
     - 
@@ -206,4 +210,4 @@ RSpec:
     - 0
     - 
     - 
-  :created_at: 2012-03-26 23:03:41.302034 -00:00
+  :created_at: 2012-03-27 22:35:20.127649 -00:00
